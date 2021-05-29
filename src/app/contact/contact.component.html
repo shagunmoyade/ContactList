@@ -1,0 +1,11 @@
+
+<app-addcontact (addcontact)="contactadd($event)"></app-addcontact>
+<br>
+  <h3 class="text-center">Your Contacts</h3>
+  <br>
+  <div *ngIf="this.contact.length==0; else elseBlock"><h5 class="text-center">No Contacts❌</h5></div>
+  <ng-template #elseBlock>
+<div *ngFor="let item of contact">
+<app-contactlist [cont]="item" (deletecontact)="contactdelete($event)" ></app-contactlist>
+</div>
+</ng-template>

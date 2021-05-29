@@ -1,0 +1,20 @@
+
+
+<div class="container">
+<h3>Add Your Contact</h3>
+  <form #form="ngForm" (ngSubmit)="submit()">
+
+      <label for="exampleInputEmail1">Name</label>
+      <input type="text" class="form-control" [(ngModel)]="Name" name="name" placeholder="Enter Name">
+
+
+<br>
+      <label for="exampleInputPassword1">Number</label>
+      <input type="number" class="form-control" [(ngModel)]="Number" name="number" placeholder="Enter Number">
+
+<br>
+    <button  class="btn btn-primary">Add Contact</button>
+
+
+    </form>
+</div>
